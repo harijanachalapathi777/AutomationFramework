@@ -20,10 +20,11 @@ public class SeleniumMethods {
 			e.printStackTrace();
 		}
 	}
-	public static WebElement waitUntilElementToVisible(By element, int timeOutInSeconds){
-		//By element = By.xpath(element);
+	public static WebElement waitUntilElementToVisible(WebDriver driver, String element, int timeOutInSeconds){
+		String xpath = element;
+		By locator = By.xpath(xpath);
       WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOutInSeconds));
-      return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+      return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
      
 }
