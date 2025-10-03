@@ -15,6 +15,7 @@ public class LoginTest extends BaseClass{
 		
         WebDriver driver = DriverFactory.getDriver();
      	LoginPage loginpage = new LoginPage(driver);
+     	
 		loginpage.Login("test", "test");
 	}
 }
