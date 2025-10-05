@@ -15,10 +15,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumMethods {
 
-	static  WebDriver driver;
+	static WebDriver driver;
 
 	public static void setImplicitlyWait(WebDriver driver, int seconds) {
-			System.out.println(driver);
+		System.out.println(driver);
 		try {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
 		} catch (Exception e) {
@@ -27,23 +27,23 @@ public class SeleniumMethods {
 		}
 	}
 
-	//Explicit wait
-	public static WebElement waitUntilElementToVisible(WebDriver driver, By element, int timeOutInSeconds){
-		//String element = xpath;
-		//WebElement ele = element;
-      WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOutInSeconds));
-      return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+	// Explicit wait
+	public static WebElement waitUntilElementToVisible(WebDriver driver, By ele, int timeOutInSeconds) {
+		// String element = xpath;
+		// WebElement ele = element;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(ele));
 	}
 
-	//Screenshot
-	public static String captureScreenshot(WebDriver driver, String path){
-		//String className = getCallerClassName();
+	// Screenshot
+	public static String captureScreenshot(WebDriver driver, String path) {
+		// String className = getCallerClassName();
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            try {
-                FileUtils.copyFile(src,new File(path));
-            } catch (IOException ex) {
-            }
-			return path;
+		try {
+			FileUtils.copyFile(src, new File(path));
+		} catch (IOException ex) {
+		}
+		return path;
 	}
-     
+
 }
