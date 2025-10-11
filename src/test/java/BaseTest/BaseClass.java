@@ -30,6 +30,7 @@ public class BaseClass {
 			driver.get(url);
 
 			driver.manage().window().maximize();
+			SeleniumMethods.setImplicitlyWait(driver, 10);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

@@ -7,6 +7,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="TestCases.LoginTest"/>
+      <class name="TestCases.AddToCartTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

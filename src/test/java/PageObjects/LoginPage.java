@@ -62,11 +62,6 @@ public class LoginPage {
 		Utils.SeleniumMethods.setImplicitlyWait(driver, 5);
 		System.out.println("finding element...");
 
-		// try {
-		// Thread.sleep(5000);
-		// } catch (Exception e) {
-		// }
-
 		//
 		By ele = By
 				.xpath("//div[@id='videoModal']/following-sibling::nav/descendant::li[6]/child::a[text()='Log out']");
