@@ -46,16 +46,16 @@ public class SeleniumMethods {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(ele));
 	}
 
-	// Screenshot
-	public static String captureScreenshot(WebDriver driver, String path) {
-		// String className = getCallerClassName();
-		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(src, new File(path));
-		} catch (IOException ex) {
-		}
-		return path;
-	}
+	// // Screenshot
+	// public static String captureScreenshot(WebDriver driver, String path) {
+	// // String className = getCallerClassName();
+	// File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	// try {
+	// FileUtils.copyFile(src, new File(path));
+	// } catch (IOException ex) {
+	// }
+	// return path;
+	// }
 
 	// Javascript executor to scroll tot he bottom/end (x-> represents
 	// horizontal(width), y -> vertical(height))

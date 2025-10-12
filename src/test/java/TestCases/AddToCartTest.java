@@ -1,14 +1,12 @@
 package TestCases;
 
-import java.sql.DriverManager;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import Utils.DriverFactory;
 
 import BaseTest.BaseClass;
 import PageObjects.AddToCartPage;
+import Utils.DriverFactory;
 
 @Listeners(Utils.AllureReportManager.class)
 public class AddToCartTest extends BaseClass {
@@ -21,6 +19,5 @@ public class AddToCartTest extends BaseClass {
 
         AddToCartPage cartPage = new AddToCartPage(driver);
         cartPage.addToCart();
-
     }
 }
