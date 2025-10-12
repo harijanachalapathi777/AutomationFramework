@@ -1,5 +1,6 @@
 package Utils;
 
+import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -13,14 +14,7 @@ import io.qameta.allure.Attachment;
 public class AllureReportManager implements ITestListener {
 
   private WebDriver driver;
-
-  // public AllureReportManager() {
-  // this.driver = null; // or safely initialize if needed
-  // }
-
-  // public AllureReportManager(WebDriver driver) {
-  // this.driver = driver;
-  // }
+  public static Logger logger;
 
   // this is to get the method name
   private static String getTestMethodName(ITestResult iTestResult) {
@@ -33,7 +27,7 @@ public class AllureReportManager implements ITestListener {
     try {
       return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     } catch (Exception e) {
-      System.out.println("ss capture failed " + e.getMessage());
+      logger.error("ss capture failed " + e);
       return null;
     }
   }

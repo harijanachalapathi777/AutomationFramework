@@ -16,6 +16,7 @@ public class LoginTest extends BaseClass {
 	@Test
 	public void login_test() throws Throwable {
 
+		logger.info("**starting logintest**");
 		WebDriver driver = DriverFactory.getDriver();
 
 		LoginPage loginpage = new LoginPage(driver);
