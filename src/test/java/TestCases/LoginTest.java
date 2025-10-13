@@ -13,13 +13,13 @@ import Utils.DriverFactory;
 public class LoginTest extends BaseClass {
 
 	// protected WebDriver driver;
-	@Test
-	public void login_test() throws Throwable {
+	@Test(dataProvider = "login_data")
+	public void login_test(String username, String pw) throws Throwable {
 
 		logger.info("**starting logintest**");
 		WebDriver driver = DriverFactory.getDriver();
 
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Login("test", "test");
+		loginpage.Login(username, pw);
 	}
 }
