@@ -4,7 +4,10 @@
 <listeners>
   <listener class-name="Utils.AllureReportManager"/>
 </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Login and AddToCartTest">
+
+    <parameter name="browser" value="chrome"></parameter>
+
     <classes>
       <class name="TestCases.LoginTest"/>
       <class name="TestCases.AddToCartTest"/>
