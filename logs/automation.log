@@ -252,3 +252,18 @@ Session ID: dab483efa8ae1e0ebfc54bff601fc29a
 15:27:02.478 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
 15:27:02.828 [main] INFO  BaseTest.BaseClass - cliked on next button
 15:27:13.676 [main] INFO  BaseTest.BaseClass - loading allure report....
+15:36:28.724 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+15:36:28.963 [main] INFO  BaseTest.BaseClass - **starting logintest**
+15:36:29.177 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+15:36:29.179 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (e21354d8dd15f8bd5693b46ec3f7b6ac)
+15:36:29.801 [main] INFO  BaseTest.BaseClass - explicit is working fine
+15:36:29.839 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+15:36:29.874 [main] INFO  BaseTest.BaseClass - Log in
+15:36:30.428 [main] INFO  BaseTest.BaseClass - login successful
+15:36:30.428 [main] INFO  BaseTest.BaseClass - setting implicit wait
+15:36:30.438 [main] INFO  BaseTest.BaseClass - finding element...
+15:36:32.187 [main] INFO  BaseTest.BaseClass - Log out
+15:36:35.910 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+15:36:36.058 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+15:36:36.298 [main] INFO  BaseTest.BaseClass - cliked on next button
+15:36:47.195 [main] INFO  BaseTest.BaseClass - loading allure report....

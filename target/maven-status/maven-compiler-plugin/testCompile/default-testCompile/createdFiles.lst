@@ -1,0 +1,9 @@
+Utils\AllureReportManager.class
+PageObjects\AddToCartPage.class
+Utils\ConfigReader.class
+PageObjects\LoginPage.class
+Utils\SeleniumMethods.class
+TestCases\LoginTest.class
+TestCases\AddToCartTest.class
+Utils\DriverFactory.class
+BaseTest\BaseClass.class
