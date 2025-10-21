@@ -126,7 +126,7 @@
                 <argument>/c</argument>
                 <argument>start</argument>
                 <argument>allure</argument>
-                <argument>C:\Users\Dell\git\repository\AutomationFramework-1\launchAllureReport.bat</argument>
+                <argument>C:\Users\Dell\git\repository\AutomationFramework\launchAllureReport.bat</argument>
               </arguments>
             </configuration>
 

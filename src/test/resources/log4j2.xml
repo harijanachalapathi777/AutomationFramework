@@ -4,7 +4,7 @@
 <Configuration status="debug">
 
     <Properties>
-        <Property name="basePath">C:\\Users\\Dell\\git\\repository\\AutomationFramework-1\\logs</Property>
+        <Property name="basePath">C:\Users\Dell\git\repository\AutomationFramework\logs</Property>
     </Properties>
 
     <Appenders>

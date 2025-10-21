@@ -48,7 +48,7 @@ public class BaseClass {
 		logger = LogManager.getLogger(BaseClass.class);
 		logger.info("Logging to absolute path: " + System.getProperty("user.dir"));
 		System.setProperty("log4j.configurationFile",
-				"C:\\Users\\Dell\\git\\repository\\AutomationFramework-1\\src\\test\\resources\\log4j2.xml");
+				"C:\\Users\\Dell\\git\\repository\\AutomationFramework\\src\\test\\resources\\log4j2.xml");
 		System.out.println("Log4j2 config file: " + System.getProperty("log4j.configurationFile"));
 	}
 
