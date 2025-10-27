@@ -6,20 +6,22 @@ import org.testng.annotations.Test;
 
 import BaseTest.BaseClass;
 import PageObjects.LoginPage;
-import Utils.AllureReportManager;
 import Utils.DriverFactory;
+import Utils.ExcelDataProvider;
+import Utils.JsonDataProvider;
 
 @Listeners(Utils.AllureReportManager.class)
 public class LoginTest extends BaseClass {
 
-	// protected WebDriver driver;
-	@Test
-	public void login_test() throws Throwable {
+	@Test(dataProvider = "JsonData", dataProviderClass = JsonDataProvider.class)
+	// @Test(dataProvider = "loginDataExcel", dataProviderClass =
+	// ExcelDataProvider.class)
+	public void login_test(String email, String pw) throws Throwable {
 
 		logger.info("**starting logintest**");
 		WebDriver driver = DriverFactory.getDriver();
 
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Login("test", "test");
+		loginpage.Login(email, pw);
 	}
 }

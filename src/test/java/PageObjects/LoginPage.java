@@ -16,7 +16,7 @@ public class LoginPage extends BaseClass {
 		this.driver = driver;
 	}
 
-	public static void Login(String username, String Password) {
+	public static void Login(String username, String password) {
 		WebElement login_button = driver.findElement(By.xpath("//a[text() = 'Log in']"));
 		login_button.click();
 		logger.info("Clicked on login_button");
@@ -41,13 +41,13 @@ public class LoginPage extends BaseClass {
 		// xpath using parent child
 		WebElement username_locator = driver
 				.findElement(By.xpath("//div[@class='form-group']//child::input[@id='loginusername']"));
-		username_locator.sendKeys("test");
+		username_locator.sendKeys("username");
 
 		Utils.SeleniumMethods.setImplicitlyWait(driver, 5);
 
 		// xpath using id
 		WebElement password_locator = driver.findElement(By.id("loginpassword"));
-		password_locator.sendKeys("test");
+		password_locator.sendKeys("password");
 
 		Utils.SeleniumMethods.setImplicitlyWait(driver, 5);
 
