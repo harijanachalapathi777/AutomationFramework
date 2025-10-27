@@ -13,6 +13,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import PageObjects.LoginPage;
 import Utils.ConfigReader;
@@ -26,7 +28,11 @@ public class BaseClass {
 	// protected LoginPage loginpage;
 
 	@BeforeMethod
-	public static void setUp() throws Throwable {
+	@Parameters("browser")
+	public static void setUp(@Optional("") String browser) throws Throwable { // @optional tag is for if i pass browser
+																				// from testNG then suite will pick
+																				// from testNG else suite will pick
+																				// browser from config file.
 
 		// Driver initialization
 		DriverFactory.initDriver();
@@ -60,16 +66,16 @@ public class BaseClass {
 		}
 	}
 
-	@DataProvider(name = "loginData", indices = { 0 })
-	public Object[][] dp_loginData() {
-		Object data[][] = {
-				{ "test", "test" },
-				{ "test1", "test1" },
-				{ "test2", "test2" },
-				{ "test3", "test3" }
-		};
-		return data;
-	}
+	// @DataProvider(name = "loginData", indices = { 0 })
+	// public Object[][] dp_loginData() {
+	// Object data[][] = {
+	// { "test", "test" },
+	// { "test1", "test1" },
+	// { "test2", "test2" },
+	// { "test3", "test3" }
+	// };
+	// return data;
+	// }
 
 	@AfterSuite
 	public void allureReport() {
