@@ -11,24 +11,32 @@ pipeline{
         stage('test'){
             steps{
                 echo "testing AutomationFramework.."
-                bat "mvn test"
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+                 bat "mvn test"
+                }
             }
         }
         stage('compile'){
+            when{
+                expression {currentBuild.currentResult == 'SUCCESS'}
+            }
             steps{
                 echo "compiling AutomationFramework.."
                 bat "mvn compile"
-            }
-        }
-        stage('deploy'){
-            steps{
-                echo "deploying AutomationFramework.."
             }
         }
         stage('Generate Allure report'){
             steps{
                 bat "mvn allure:report"
                 allure includeProperties: false, jdk: '', results: [[path: 'allure-results']], commandline: 'allure'
+            }
+        }
+        stage('deploy'){
+            when {
+                expression { currentBuild.currentResult == 'SUCCESS' }
+            }
+            steps{
+                echo "deploying AutomationFramework.."
             }
         }
     }
