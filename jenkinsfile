@@ -1,0 +1,28 @@
+pipeline{
+    agents any
+    stages{
+        stage('build'){
+            steps{
+                echo "building AutomationFramework.."
+                bat "mvn clean"
+            }
+        }
+        stage('test'){
+            stages{
+                echo "testing AutomationFramework"
+                bat "mvn test"
+            }
+        }
+        stage('compile'){
+            steps{
+                echo "compiling AutomationFramework.."
+                bat "mvn compile"
+            }
+        }
+        stage('deploy'){
+            steps{
+                echo "deploying AutomationFramework.."
+            }
+        }
+    }
+}
