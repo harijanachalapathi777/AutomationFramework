@@ -1,5 +1,5 @@
 # AutomationFramework
-An Automation framework build for java. using TestNG framework and it will have all the utilities, reports, logs, screenshots, retry mechanisms, test data. anyone can use this for their projects. 
+An Automation framework built for smaell/enterprice java projects using TestNG framework and it will have all the utilities, reports, logs, screenshots,CI/CD, retry mechanisms, test data from diff sources. anyone can use this for their projects. 
 
 to optimize:
 -----------
@@ -7,15 +7,9 @@ to optimize:
 2. 
 3. 
 
-Done:
------
-1. Implicit wait
-2. 
-
 
 TO DO:
 -----
-1. Login Test complete
-2. screenshots utility
-3. Logging
-4. Allure Reporting
+1. ci/cd
+2. screenshots utility [attach in report for failed tests]
+3. docker
