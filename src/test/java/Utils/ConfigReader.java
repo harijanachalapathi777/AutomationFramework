@@ -19,7 +19,17 @@ public class ConfigReader {
 		}
 	}
 
+	// to read data from pipeline first then mavn prop then finally from config file
 	public static String get(String key) {
+		// priority : env variable(from pipeline) -> Maven Property -> Config file
+		String env = System.getenv(key);
+		if (env != null)
+			return env;
+
+		String sysProp = System.getProperty(key);
+		if (env != null)
+			return env;
+
 		return prop.getProperty(key);
 	}
 
