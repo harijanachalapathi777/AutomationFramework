@@ -5,6 +5,13 @@ pipeline{
             steps{
                 echo "building AutomationFramework.."
                 bat "mvn clean"
+                bat "dir /s allure-results"
+            }
+        }
+        stage('clean'){
+            step{
+                echo "cleaning project.."
+                bat "mvn clean"
             }
         }
         stage('test'){
@@ -24,10 +31,10 @@ pipeline{
                 echo "deploying AutomationFramework.."
             }
         }
-        stage('Allure report'){
+        stage('Generate Allure report'){
             steps{
                 bat "mvn allure:report"
-                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']], commandline: 'allure'
             }
         }
     }
