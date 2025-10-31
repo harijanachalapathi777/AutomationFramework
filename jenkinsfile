@@ -1,5 +1,5 @@
 pipeline{
-    agents any
+    agent any
     stages{
         stage('build'){
             steps{
@@ -8,8 +8,8 @@ pipeline{
             }
         }
         stage('test'){
-            stages{
-                echo "testing AutomationFramework"
+            steps{
+                echo "testing AutomationFramework.."
                 bat "mvn test"
             }
         }
