@@ -8,12 +8,6 @@ pipeline{
                 bat "dir /s allure-results"
             }
         }
-        stage('clean'){
-            step{
-                echo "cleaning project.."
-                bat "mvn clean"
-            }
-        }
         stage('test'){
             steps{
                 echo "testing AutomationFramework.."
