@@ -5,9 +5,7 @@ pipeline{
             steps{
                 echo "building AutomationFramework.."
                 sh 'mvn clean compile'
-                bat "mvn clean"
-                bat "dir /s allure-results"
-            }
+                }
         }
         stage('test'){
             steps{
@@ -24,6 +22,11 @@ pipeline{
                 allure results: [[path: 'allure-results']]            
                 }
             }
+            post {
+            always {
+            echo "Allure report generated even if tests failed"
+        }
+    }
         }
         stage('deploy'){
             when {
