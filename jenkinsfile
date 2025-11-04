@@ -4,6 +4,7 @@ pipeline{
         stage('build'){
             steps{
                 echo "building AutomationFramework.."
+                sh 'mvn clean compile'
                 bat "mvn clean"
                 bat "dir /s allure-results"
             }
@@ -12,23 +13,16 @@ pipeline{
             steps{
                 echo "testing AutomationFramework.."
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
-                 bat "mvn test"
+                sh 'mvn test -DsuiteXmlFile=src/testng.xml'
                 }
-            }
-        }
-        stage('compile'){
-            when{
-                expression {currentBuild.currentResult == 'SUCCESS'}
-            }
-            steps{
-                echo "compiling AutomationFramework.."
-                bat "mvn compile"
             }
         }
         stage('Generate Allure report'){
             steps{
-                bat "mvn allure:report"
-                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']], commandline: 'allure'
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+                sh "mvn allure:report"
+                allure results: [[path: 'allure-results']]            
+                }
             }
         }
         stage('deploy'){
