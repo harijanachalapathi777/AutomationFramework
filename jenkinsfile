@@ -22,11 +22,11 @@ pipeline{
                 }
             }
             post {
-            always {
-            echo "Allure report generated even if tests failed"
+                always {
+                echo "Allure report generated even if tests failed"
+            }
         }
     }
-        }
         stage('deploy'){
             when {
                 expression { currentBuild.currentResult == 'SUCCESS' }
@@ -44,5 +44,13 @@ pipeline{
                     to: "harijanachalapathi7@gmail.com"
                 )
             }
+            unstable {
+                emailext(
+                    subject: "UNSTABLE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: "Build is unstable (some tests failed). View details at ${env.BUILD_URL}",
+                    to: "team@example.com"
+                )
+            }
         }
+        
 }

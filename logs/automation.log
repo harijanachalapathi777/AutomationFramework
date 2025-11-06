@@ -820,3 +820,60 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 Session ID: 734da088d0dfb88b8f9efb247843e2ec
 00:05:15.666 [main] INFO  BaseTest.BaseClass - clicking on cart button..
 00:05:16.524 [main] INFO  BaseTest.BaseClass - loading allure report....
+00:57:04.326 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:04.589 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:57:04.775 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:57:04.775 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (5eb8f6294dc4e4413959bba84ba69d2a)
+00:57:05.411 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:57:05.452 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:57:05.538 [main] INFO  BaseTest.BaseClass - Log in
+00:57:06.022 [main] INFO  BaseTest.BaseClass - login successful
+00:57:06.022 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:57:06.028 [main] INFO  BaseTest.BaseClass - finding element...
+00:57:08.320 [main] INFO  BaseTest.BaseClass - Log out
+00:57:12.018 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:12.023 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:57:12.273 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:57:12.275 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (d65b2d37266fce43d1664daa8828c169)
+00:57:12.888 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:57:12.913 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:57:12.946 [main] INFO  BaseTest.BaseClass - Log in
+00:57:13.373 [main] INFO  BaseTest.BaseClass - login successful
+00:57:13.373 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:57:13.375 [main] INFO  BaseTest.BaseClass - finding element...
+00:57:15.545 [main] INFO  BaseTest.BaseClass - Log out
+00:57:18.458 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:18.468 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:57:18.601 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:57:18.601 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (cea642d8e463219d858ef9bc74e70691)
+00:57:19.254 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:57:19.277 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:57:19.298 [main] INFO  BaseTest.BaseClass - Log in
+00:57:19.648 [main] INFO  BaseTest.BaseClass - login successful
+00:57:19.653 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:57:19.657 [main] INFO  BaseTest.BaseClass - finding element...
+00:57:21.529 [main] INFO  BaseTest.BaseClass - Log out
+00:57:24.495 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:24.502 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:57:24.646 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:57:24.646 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (3f17c94bff5fd7c12465cc8b1d2506f4)
+00:57:25.241 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:57:25.273 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:57:25.383 [main] INFO  BaseTest.BaseClass - Log in
+00:57:25.753 [main] INFO  BaseTest.BaseClass - login successful
+00:57:25.753 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:57:25.757 [main] INFO  BaseTest.BaseClass - finding element...
+00:57:28.041 [main] INFO  BaseTest.BaseClass - Log out
+00:57:30.880 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:30.963 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+00:57:31.131 [main] INFO  BaseTest.BaseClass - cliked on next button
+00:57:43.945 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:43.978 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+00:57:44.166 [main] INFO  BaseTest.BaseClass - cliked on next button
+00:57:57.143 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:57:57.168 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+00:57:57.425 [main] INFO  BaseTest.BaseClass - cliked on next button
+00:58:11.967 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:58:12.076 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+00:58:12.266 [main] INFO  BaseTest.BaseClass - cliked on next button
+00:58:22.916 [main] INFO  BaseTest.BaseClass - loading allure report....
