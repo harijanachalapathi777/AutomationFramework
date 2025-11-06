@@ -757,3 +757,66 @@ Session ID: a68f75488e9e33fff62d5b7abe89f938
 04:08:23.258 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
 04:08:23.435 [main] INFO  BaseTest.BaseClass - cliked on next button
 04:08:34.055 [main] INFO  BaseTest.BaseClass - loading allure report....
+00:04:42.100 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:04:42.333 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:04:42.526 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:04:42.527 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (52cb814b1c57c477ed9f2e355d14f7a7)
+00:04:43.111 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:04:43.121 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:04:43.137 [main] INFO  BaseTest.BaseClass - Log in
+00:04:43.375 [main] INFO  BaseTest.BaseClass - login successful
+00:04:43.375 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:04:43.378 [main] INFO  BaseTest.BaseClass - finding element...
+00:04:44.931 [main] INFO  BaseTest.BaseClass - Log out
+00:04:47.014 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:04:47.021 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:04:47.105 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:04:47.105 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (25f12c630a420a969b472aa68461c534)
+00:04:47.661 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:04:47.676 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:04:47.691 [main] INFO  BaseTest.BaseClass - Log in
+00:04:47.901 [main] INFO  BaseTest.BaseClass - login successful
+00:04:47.901 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:04:47.903 [main] INFO  BaseTest.BaseClass - finding element...
+00:04:49.517 [main] INFO  BaseTest.BaseClass - Log out
+00:04:51.595 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:04:51.600 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:04:51.753 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:04:51.753 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (11d139273b8e2fca2488f5a13186ab83)
+00:04:52.304 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:04:52.314 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:04:52.334 [main] INFO  BaseTest.BaseClass - Log in
+00:04:52.568 [main] INFO  BaseTest.BaseClass - login successful
+00:04:52.569 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:04:52.570 [main] INFO  BaseTest.BaseClass - finding element...
+00:04:54.218 [main] INFO  BaseTest.BaseClass - Log out
+00:04:56.083 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:04:56.093 [main] INFO  BaseTest.BaseClass - **starting logintest**
+00:04:56.256 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+00:04:56.256 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (b29a8dcaa38aa5958d939056536078e9)
+00:04:56.887 [main] INFO  BaseTest.BaseClass - explicit is working fine
+00:04:56.915 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+00:04:56.938 [main] INFO  BaseTest.BaseClass - Log in
+00:04:57.185 [main] INFO  BaseTest.BaseClass - login successful
+00:04:57.185 [main] INFO  BaseTest.BaseClass - setting implicit wait
+00:04:57.188 [main] INFO  BaseTest.BaseClass - finding element...
+00:04:58.852 [main] INFO  BaseTest.BaseClass - Log out
+00:05:00.882 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:05:00.903 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+00:05:01.083 [main] INFO  BaseTest.BaseClass - cliked on next button
+00:05:13.547 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+00:05:13.567 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+00:05:13.688 [main] INFO  BaseTest.BaseClass - cliked on next button
+00:05:14.323 [main] INFO  BaseTest.BaseClass - waited for element to locate
+00:05:14.352 [main] INFO  BaseTest.BaseClass - Scrolled to desired product element
+00:05:15.016 [main] INFO  BaseTest.BaseClass - clicked on desired product element
+00:05:15.028 [main] ERROR BaseTest.BaseClass - Exception is: org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=142.0.7444.59)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [734da088d0dfb88b8f9efb247843e2ec, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.59, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63206}, goog:processID: 14520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63206/devtoo..., se:cdpVersion: 142.0.7444.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 734da088d0dfb88b8f9efb247843e2ec
+00:05:15.666 [main] INFO  BaseTest.BaseClass - clicking on cart button..
+00:05:16.524 [main] INFO  BaseTest.BaseClass - loading allure report....

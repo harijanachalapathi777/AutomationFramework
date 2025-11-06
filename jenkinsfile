@@ -35,5 +35,14 @@ pipeline{
                 echo "deploying AutomationFramework.."
             }
         }
+        post{
+            success{
+                emailext(
+                    subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: "Build succeeded! view details at ${env.BUILD_URL}",
+                    to: "harijanachalapathi7@gmail.com"
+                )
+            }
+        }
     }
 }
