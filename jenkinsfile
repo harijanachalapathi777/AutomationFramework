@@ -35,6 +35,7 @@ pipeline{
                 echo "deploying AutomationFramework.."
             }
         }
+    }
         post{
             success{
                 emailext(
@@ -44,5 +45,4 @@ pipeline{
                 )
             }
         }
-    }
 }
