@@ -48,7 +48,7 @@ pipeline{
                 emailext(
                     subject: "UNSTABLE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                     body: "Build is unstable (some tests failed). View details at ${env.BUILD_URL}",
-                    to: "team@example.com"
+                    to: "harijanachalapathi7@gmail.com"
                 )
             }
         }
