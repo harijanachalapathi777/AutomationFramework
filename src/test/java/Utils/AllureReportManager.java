@@ -9,11 +9,12 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import BaseTest.BaseClass;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 
 public class AllureReportManager implements ITestListener {
 
-  private WebDriver driver;
+  public static WebDriver driver;
   public static Logger logger;
 
   // this is to get the method name
@@ -24,12 +25,7 @@ public class AllureReportManager implements ITestListener {
   // this is to get screenshot on failure
   @Attachment(value = "Screenshot on failure", type = "image/png")
   public static byte[] saveFailureScreenshot(WebDriver driver) {
-    try {
-      return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-    } catch (Exception e) {
-      logger.error("ss capture failed " + e);
-      return null;
-    }
+    return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
   }
 
   // this is for the plain message
@@ -70,8 +66,8 @@ public class AllureReportManager implements ITestListener {
 
     Object testClass = iTestResult.getInstance();
     WebDriver driver = DriverFactory.getDriver();
-    System.out.println(driver);
-    if (driver != null) {
+    System.out.println("driver in onTestFailure method is .........." + driver);
+    if (driver instanceof WebDriver) {
       System.out.println("screenshot captured for test case " + getTestMethodName(iTestResult));
       saveFailureScreenshot(driver);
     }

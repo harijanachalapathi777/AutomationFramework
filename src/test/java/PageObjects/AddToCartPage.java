@@ -45,7 +45,7 @@ public class AddToCartPage extends BaseClass {
         }
 
         // clicking on cart
-        By addCart_button = By.xpath("//a[text()='Add to cart']");
+        By addCart_button = By.xpath("/a[text()='Add to cart']");
         SeleniumMethods.waitUntilElementToVisible(driver, addCart_button, 10);
 
         SeleniumMethods.clickElement(addCart_button, driver);

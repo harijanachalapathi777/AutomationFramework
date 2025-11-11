@@ -1,9 +1,17 @@
 Utils\AllureReportManager.class
 PageObjects\AddToCartPage.class
+Utils\JsonDataProvider.class
 Utils\ConfigReader.class
+Utils\JsonUtil.class
+Utils\RetryAnalyzer.class
+Utils\RetryListener.class
 PageObjects\LoginPage.class
+Utils\JsonUtil$1.class
 Utils\SeleniumMethods.class
 TestCases\LoginTest.class
 TestCases\AddToCartTest.class
 Utils\DriverFactory.class
+Utils\ExcelUtil.class
+Utils\ExcelDataProvider.class
+Utils\ExcelReader.class
 BaseTest\BaseClass.class

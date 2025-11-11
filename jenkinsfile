@@ -1,6 +1,12 @@
 pipeline{
     agent any
+
     stages{
+        stage('checkout'){
+            steps{
+                 git branch : 'main', url: 'https://github.com/harijanachalapathi777/AutomationFramework.git'
+            }
+        }
         stage('build'){
             steps{
                 echo "building AutomationFramework.."
