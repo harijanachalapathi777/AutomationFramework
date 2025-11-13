@@ -1,6 +1,9 @@
 pipeline{
     agent any
 
+triggers{
+    polSCM('H/5 * * * *')
+}
     stages{
         stage('checkout'){
             steps{
