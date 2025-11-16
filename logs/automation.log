@@ -1537,3 +1537,27 @@ Session ID: f59e58bbb9b02e4937df043d3c4c902b
 00:51:37.243 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
 00:51:37.465 [main] INFO  BaseTest.BaseClass - cliked on next button
 00:51:48.561 [main] INFO  BaseTest.BaseClass - loading allure report....
+01:25:09.785 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+01:25:09.870 [main] INFO  BaseTest.BaseClass - **starting logintest**
+01:25:09.979 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+01:25:09.979 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (cd4967b7b5377527c57a790b0a5fb137)
+01:25:10.549 [main] INFO  BaseTest.BaseClass - explicit is working fine
+01:25:10.557 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+01:25:10.573 [main] INFO  BaseTest.BaseClass - Log in
+01:25:10.793 [main] INFO  BaseTest.BaseClass - login successful
+01:25:10.793 [main] INFO  BaseTest.BaseClass - setting implicit wait
+01:25:10.795 [main] INFO  BaseTest.BaseClass - finding element...
+01:25:12.433 [main] INFO  BaseTest.BaseClass - Log out
+01:25:14.458 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+01:25:14.473 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+01:25:14.576 [main] INFO  BaseTest.BaseClass - cliked on next button
+01:25:26.659 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+01:25:26.675 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+01:25:26.805 [main] INFO  BaseTest.BaseClass - cliked on next button
+01:25:38.872 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+01:25:38.891 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+01:25:38.986 [main] INFO  BaseTest.BaseClass - cliked on next button
+01:25:51.051 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\ProgramData\Jenkins\.jenkins\workspace\AutomationFramework
+01:25:51.070 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+01:25:51.164 [main] INFO  BaseTest.BaseClass - cliked on next button
+01:26:01.614 [main] INFO  BaseTest.BaseClass - loading allure report....
