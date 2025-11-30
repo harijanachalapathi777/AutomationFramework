@@ -15,9 +15,8 @@ import Utils.JsonDataProvider;
 public class LoginTest extends BaseClass {
 
 	// @Parameters()
-	@Test(dataProvider = "JsonData", dataProviderClass = JsonDataProvider.class)
-	// @Test(dataProvider = "loginDataExcel", dataProviderClass =
-	// ExcelDataProvider.class)
+	// @Test(dataProvider = "JsonData", dataProviderClass = JsonDataProvider.class)
+	@Test(dataProvider = "loginDataExcel", dataProviderClass = ExcelDataProvider.class)
 	public void login_test(String email, String pw) throws Throwable {
 
 		logger.info("**starting logintest**");
