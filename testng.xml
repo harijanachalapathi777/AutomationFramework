@@ -7,6 +7,7 @@
   <listener class-name="Utils.RetryListener"/>
 </listeners>
   <test thread-count="5" name="Test">
+    <parameter name="browserName" value="edge"></parameter>
     <classes>
       <class name="TestCases.LoginTest"/>
       <class name="TestCases.AddToCartTest"/>
