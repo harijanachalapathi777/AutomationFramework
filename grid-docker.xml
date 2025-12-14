@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Grid-Docker Suite">
+<listeners>
+  <listener class-name="Utils.AllureReportManager"/>
+  <!--<listener class-name="io.qameta.allure.testng.AllureTestNg"/> -->
+  <listener class-name="Utils.RetryListener"/>
+</listeners>
+
+
+  <test name="Grid-Docker chrome test">
+    <classes>
+      <class name="TestCases.LoginTest"/>
+      <class name="TestCases.AddToCartTest"/>
+    </classes>
+  </test> 
+
+
+  <test name="Grid-Docker edge test">
+    <classes>
+      <class name="TestCases.LoginTest"/>
+      <class name="TestCases.AddToCartTest"/>
+    </classes>
+  </test>
+
+</suite>
