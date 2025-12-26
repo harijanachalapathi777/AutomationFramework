@@ -13,3 +13,27 @@ TO DO:
 1. ci/cd
 2. screenshots utility [attach in report for failed tests]
 3. docker
+
+
+
+
+what's done:
+------------
+
+driver setup for local & remote
+runnning scripts through testng, maven, CI/CD, selenium grid using docker, testng xml files, bat file
+Test data from excel & Json
+Test results throgh Allure report
+parellel execution & sequential execution
+Run tests automatically using Polling, websockets using github & jenkins
+logging
+retry
+test results artifacts
+
+
+whats to be done:
+-----------------
+cross browser
+api tests using rest assured - p1
+running UI tests and API tests - p1
+integrate cloud services like S3, DB, API using AWS - p2
