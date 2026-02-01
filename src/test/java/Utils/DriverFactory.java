@@ -28,7 +28,8 @@ public class DriverFactory {
 			switch (browser.toLowerCase()) {
 				case "chrome":
 					ChromeOptions chromeOptions = new ChromeOptions();
-					chromeOptions.addArguments("--headless");
+					// chromeOptions.addArguments("--headless");
+
 					chromeOptions.setCapability("browserName", "chrome");
 					webDriver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
 					break;

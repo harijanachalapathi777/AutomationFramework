@@ -31,9 +31,12 @@ retry
 test results artifacts
 
 
-whats to be done:
+what's need to be done:
 -----------------
 cross browser
+run headless (keep it in config file not hardcoaded)
 api tests using rest assured - p1
+run tests on remote machine (probably using AWS)
 running UI tests and API tests - p1
 integrate cloud services like S3, DB, API using AWS - p2
+Add BDD.
