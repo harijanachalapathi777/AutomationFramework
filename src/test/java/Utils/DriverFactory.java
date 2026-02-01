@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -28,7 +30,7 @@ public class DriverFactory {
 			switch (browser.toLowerCase()) {
 				case "chrome":
 					ChromeOptions chromeOptions = new ChromeOptions();
-					// chromeOptions.addArguments("--headless");
+					chromeOptions.addArguments("--headless");
 
 					chromeOptions.setCapability("browserName", "chrome");
 					webDriver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
@@ -38,6 +40,12 @@ public class DriverFactory {
 					EdgeOptions edgeOptions = new EdgeOptions();
 					edgeOptions.setCapability("browsername", "edge");
 					webDriver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
+					break;
+
+				case: "firefox":
+				    FirefoxOptions firefoxOptions = new FirefoxOptions();
+					firefoxOptions.setCapability("browsername","firefox");
+					webDriver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
 					break;
 
 				default:
@@ -53,6 +61,11 @@ public class DriverFactory {
 				case "edge":
 					WebDriverManager.edgedriver().setup();
 					webDriver = new EdgeDriver();
+					break;
+
+				case "firefox":
+					WebDriverManager.firefoxdriver().setup();
+					webDriver = new FirefoxDriver();
 					break;
 
 				default:
