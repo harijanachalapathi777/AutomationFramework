@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumMethods {
 
-	static WebDriver driver;
+	private WebDriver driver;
 
 	public static void setImplicitlyWait(WebDriver driver, int seconds) {
 		System.out.println(driver);

@@ -23,27 +23,32 @@ import Utils.SeleniumMethods;
 
 public class BaseClass {
 
-	static WebDriver driver;
+	// static WebDriver driver;
 	public static Logger logger;
 	// protected LoginPage loginpage;
 
-	@BeforeMethod
-	@Parameters("browser")
+	@BeforeMethod(alwaysRun = true)
+	@Parameters({ "browser" })
 	public static void setUp(@Optional("") String browser) throws Throwable { // @optional tag is for if i pass browser
 																				// from testNG then suite will pick
 																				// from testNG else suite will pick
 																				// browser from config file.
 
+		if (!browser.isEmpty()) {
+			ConfigReader.set("browser", browser);
+		}
+
 		// Driver initialization
 		DriverFactory.initDriver();
-		try {
-			String url = ConfigReader.get("url");
 
-			driver = DriverFactory.getDriver();
+		try {
+			// String url = ConfigReader.get("url");
+
+			WebDriver driver = DriverFactory.getDriver();
 
 			// LoginPage loginpage = new LoginPage(driver);
 
-			driver.get(url);
+			driver.get(ConfigReader.get("url"));
 
 			driver.manage().window().maximize();
 			SeleniumMethods.setImplicitlyWait(driver, 10);
@@ -59,11 +64,10 @@ public class BaseClass {
 		System.out.println("Log4j2 config file: " + System.getProperty("log4j.configurationFile"));
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public static void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
+		DriverFactory.quitDriver();
+		logger.info(Thread.currentThread().getId());
 	}
 
 	// @DataProvider(name = "loginData", indices = { 0 })

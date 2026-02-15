@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import BaseTest.BaseClass;
+import Utils.DriverFactory;
 
 public class LoginPage extends BaseClass {
 
@@ -28,7 +29,7 @@ public class LoginPage extends BaseClass {
 
 		logger.info("explicit is working fine");
 		WebElement login_model = driver.findElement(By.xpath("//h5[text() = 'Log in']"));
-		// Utils.SeleniumMethods.waitUntilElementToVisible(driver, login_model, 5);
+		//Utils.SeleniumMethods.wait.Until(ElementToVisible(driver, login_model, 5));
 
 		logger.info("implicit and explicit time is set");
 

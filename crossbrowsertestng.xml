@@ -10,6 +10,7 @@
 
 
   <test name="Crossbrowser - chrome test">
+    <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="TestCases.LoginTest"/>
       <class name="TestCases.AddToCartTest"/>
@@ -18,10 +19,19 @@
 
 
   <test name="Crossbrowser - edge test">
+    <parameter name="browser" value="edge"></parameter>
     <classes>
       <class name="TestCases.LoginTest"/>
       <class name="TestCases.AddToCartTest"/>
     </classes>
   </test>
 
+
+  <test name="Crossbrowser - firefox test">
+    <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="TestCases.LoginTest"/>
+      <class name="TestCases.AddToCartTest"/>
+    </classes>
+  </test>
 </suite>

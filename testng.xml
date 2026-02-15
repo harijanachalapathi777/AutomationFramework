@@ -6,7 +6,7 @@
   <!--<listener class-name="io.qameta.allure.testng.AllureTestNg"/> -->
   <listener class-name="Utils.RetryListener"/>
 </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name=" Master Suite">
     <parameter name="browserName" value="edge"></parameter>
     <classes>
       <class name="TestCases.LoginTest"/>

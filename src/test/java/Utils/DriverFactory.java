@@ -26,7 +26,7 @@ public class DriverFactory {
 
 		WebDriver webDriver;
 
-		if (runMode.equalsIgnoreCase("remote")) {
+		if ("remote".equalsIgnoreCase("runMode")) {
 			switch (browser.toLowerCase()) {
 				case "chrome":
 					ChromeOptions chromeOptions = new ChromeOptions();
@@ -38,13 +38,13 @@ public class DriverFactory {
 
 				case "edge":
 					EdgeOptions edgeOptions = new EdgeOptions();
-					edgeOptions.setCapability("browsername", "edge");
+					edgeOptions.setCapability("browserName", "edge");
 					webDriver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
 					break;
 
-				case: "firefox":
-				    FirefoxOptions firefoxOptions = new FirefoxOptions();
-					firefoxOptions.setCapability("browsername","firefox");
+				case "firefox":
+					FirefoxOptions firefoxOptions = new FirefoxOptions();
+					firefoxOptions.setCapability("browserName", "firefox");
 					webDriver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
 					break;
 

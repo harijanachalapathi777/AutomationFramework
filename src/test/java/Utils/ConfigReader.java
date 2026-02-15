@@ -36,5 +36,8 @@ public class ConfigReader {
 	public static boolean getBoolean(String key) {
 		return Boolean.parseBoolean(prop.getProperty(key));
 	}
+	public static void set(String key, String value){
+        prop.setProperty(key, value);
+	}
 
 }
