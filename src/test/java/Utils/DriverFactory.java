@@ -16,10 +16,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
-	public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
 	public static void initDriver() throws Throwable {
-
+ 
 		String browser = ConfigReader.get("browser");
 		String runMode = ConfigReader.get("runMode");
 		String gridUrl = ConfigReader.get("gridUrl");

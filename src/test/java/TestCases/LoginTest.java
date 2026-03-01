@@ -2,14 +2,12 @@ package TestCases;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
+import org.testng.Assert;
 import BaseTest.BaseClass;
 import PageObjects.LoginPage;
 import Utils.DriverFactory;
 import Utils.ExcelDataProvider;
-import Utils.JsonDataProvider;
 
 @Listeners(Utils.AllureReportManager.class)
 public class LoginTest extends BaseClass {
@@ -24,5 +22,12 @@ public class LoginTest extends BaseClass {
 
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.Login(email, pw);
+		Assert.fail();
+	}
+
+	@Test
+	public void testFailure() {
+		logger.info("**starting testfailure**");
+		Assert.fail("This test is designed to fail");
 	}
 }

@@ -10,8 +10,6 @@ import Utils.DriverFactory;
 
 @Listeners(Utils.AllureReportManager.class)
 public class AddToCartTest extends BaseClass {
-    // static WebDriver driver;
-
     @Test
     public void addToCart_test() {
 

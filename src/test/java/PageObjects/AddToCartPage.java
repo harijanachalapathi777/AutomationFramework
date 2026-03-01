@@ -45,15 +45,17 @@ public class AddToCartPage extends BaseClass {
         }
 
         // clicking on cart
-        By addCart_button = By.xpath("/a[text()='Add to cart']");
+        By addCart_button = By.xpath("/a[text()='Add to cart'] 8787    ");
         SeleniumMethods.waitUntilElementToVisible(driver, addCart_button, 10);
 
         SeleniumMethods.clickElement(addCart_button, driver);
 
         logger.info("clicking on cart button..");
         // finding element by link text
-        WebElement cart_button = driver.findElement(By.linkText("Cart"));
-        cart_button.click();
+        By cart_button = By.linkText("Cart");
+        SeleniumMethods.waitUntillPresenceOfElementLocated(driver, cart_button, 10);
+        // WebElement cart_button = driver.findElement(By.linkText("Cart"));
+        SeleniumMethods.clickElement(cart_button, driver);
 
     }
 

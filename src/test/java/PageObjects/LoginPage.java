@@ -29,7 +29,7 @@ public class LoginPage extends BaseClass {
 
 		logger.info("explicit is working fine");
 		WebElement login_model = driver.findElement(By.xpath("//h5[text() = 'Log in']"));
-		//Utils.SeleniumMethods.wait.Until(ElementToVisible(driver, login_model, 5));
+		// Utils.SeleniumMethods.wait.Until(ElementToVisible(driver, login_model, 5));
 
 		logger.info("implicit and explicit time is set");
 
@@ -75,7 +75,7 @@ public class LoginPage extends BaseClass {
 		logger.info(logout.getText());
 		logout.click();
 		try {
-			Assert.assertEquals("Log out", logout_text);
+			Assert.assertEquals("Log outtttt", logout_text);
 		} catch (AssertionError e) {
 			logger.error("Assertion failed: " + e.getMessage());
 			logger.debug("debug logs...");

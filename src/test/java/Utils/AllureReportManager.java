@@ -14,8 +14,8 @@ import io.qameta.allure.Attachment;
 
 public class AllureReportManager implements ITestListener {
 
-  public static WebDriver driver;
-  public static Logger logger;
+  // WebDriver driver = DriverFactory.getDriver();
+  // public static Logger logger;
 
   // this is to get the method name
   private static String getTestMethodName(ITestResult iTestResult) {
@@ -23,8 +23,8 @@ public class AllureReportManager implements ITestListener {
   }
 
   // this is to get screenshot on failure
-  @Attachment(value = "Screenshot on failure", type = "image/png")
-  public static byte[] saveFailureScreenshot(WebDriver driver) {
+  @Attachment(value = "{0} screenshots", type = "image/png")
+  public static byte[] saveFailureScreenshot(WebDriver driver, String testName) {
     return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
   }
 
@@ -35,43 +35,37 @@ public class AllureReportManager implements ITestListener {
   }
 
   @Override
-  public void onStart(ITestContext iTestContext) {
-    System.out.println("start method.." + iTestContext.getName() + "started");
-    if (driver != null) {
-      iTestContext.setAttribute("Webdriver", driver);
-    }
+  public void onStart(ITestContext context) {
+    System.out.println("start Method: " + context.getName() + " started");
   }
 
   @Override
-  public void onFinish(ITestContext iTestContext) {
-    System.out.println("finish method.." + iTestContext.getName() + "finished");
-    if (driver != null) {
-      iTestContext.setAttribute("Webdriver", driver);
-    }
+  public void onFinish(ITestContext context) {
+    System.out.println("finish method.." + context.getName() + "finished");
   }
 
   @Override
-  public void onTestStart(ITestResult iTestResult) {
-    System.out.println("test start method " + getTestMethodName(iTestResult) + "test started");
+  public void onTestStart(ITestResult result) {
+    System.out.println("test start method " + getTestMethodName(result) + "test started");
   }
 
   @Override
-  public void onTestSuccess(ITestResult iTestResult) {
-    System.out.println("test success method " + getTestMethodName(iTestResult) + "test successed");
+  public void onTestSuccess(ITestResult result) {
+    System.out.println("test success method " + getTestMethodName(result) + "test successed");
   }
 
   @Override
-  public void onTestFailure(ITestResult iTestResult) {
-    System.out.println("test failure method " + getTestMethodName(iTestResult) + "test failed");
+  public void onTestFailure(ITestResult result) {
+    System.out.println("Test failure: " + getTestMethodName(result) + " failed");
 
-    Object testClass = iTestResult.getInstance();
+    // get driver from test context(safe for parellel execution/ parellel runs)
     WebDriver driver = DriverFactory.getDriver();
-    System.out.println("driver in onTestFailure method is .........." + driver);
-    if (driver instanceof WebDriver) {
-      System.out.println("screenshot captured for test case " + getTestMethodName(iTestResult));
-      saveFailureScreenshot(driver);
+
+    if (driver != null) {
+      String testName = result.getName();
+      SeleniumMethods.captureScreenshot(driver, testName);
+      saveFailureScreenshot(driver, testName);
     }
-    saveTextLog(getTestMethodName(iTestResult) + "failed screenshot is taken!");
   }
 
   @Override

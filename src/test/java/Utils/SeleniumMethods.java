@@ -2,7 +2,9 @@ package Utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -17,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumMethods {
 
-	private WebDriver driver;
+	WebDriver driver = DriverFactory.getDriver();
 
 	public static void setImplicitlyWait(WebDriver driver, int seconds) {
 		System.out.println(driver);
@@ -47,15 +49,23 @@ public class SeleniumMethods {
 	}
 
 	// // Screenshot
-	// public static String captureScreenshot(WebDriver driver, String path) {
-	// // String className = getCallerClassName();
-	// File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	// try {
-	// FileUtils.copyFile(src, new File(path));
-	// } catch (IOException ex) {
-	// }
-	// return path;
-	// }
+	public static String captureScreenshot(WebDriver driver, String testName) {
+		// String className = getCallerClassName();
+		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+		String screnshotDirectory = System.getProperty("user.dir") + File.separator + "screenshots";
+		String path = screnshotDirectory + "/" + testName + "_" + timestamp + ".png";
+
+		File srcFile = new File(path);
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File captureScreen = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(captureScreen, srcFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return path;
+	}
 
 	// Javascript executor to scroll tot he bottom/end (x-> represents
 	// horizontal(width), y -> vertical(height))
