@@ -19,7 +19,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumMethods {
 
-	WebDriver driver = DriverFactory.getDriver();
+	private WebDriver driver;
+
+	public SeleniumMethods(WebDriver driver) {
+		this.driver = driver;
+	}
 
 	public static void setImplicitlyWait(WebDriver driver, int seconds) {
 		System.out.println(driver);
@@ -98,6 +102,10 @@ public class SeleniumMethods {
 	 */
 	public static void clickElement(By locator, WebDriver driver) {
 		driver.findElement(locator).click();
+	}
+
+	public static void clickElement(WebElement locator, WebDriver driver) {
+		locator.click();
 	}
 
 }

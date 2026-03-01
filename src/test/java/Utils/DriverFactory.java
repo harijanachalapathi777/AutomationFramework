@@ -19,7 +19,7 @@ public class DriverFactory {
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
 	public static void initDriver() throws Throwable {
- 
+
 		String browser = ConfigReader.get("browser");
 		String runMode = ConfigReader.get("runMode");
 		String gridUrl = ConfigReader.get("gridUrl");

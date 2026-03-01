@@ -8,18 +8,25 @@ import org.testng.Assert;
 
 import BaseTest.BaseClass;
 import Utils.DriverFactory;
+import Utils.SeleniumMethods;
 
 public class LoginPage extends BaseClass {
 
-	static WebDriver driver;
+	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		this.driver = DriverFactory.getDriver();
 	}
 
-	public static void Login(String username, String password) {
-		WebElement login_button = driver.findElement(By.xpath("//a[text() = 'Log in']"));
-		login_button.click();
+	// SeleniumMethods seleniumMethods = new SeleniumMethods(driver);
+
+	public void Login(String username, String password) {
+		By login_button = By.xpath("//a[text() = 'Log in']");
+		try {
+			SeleniumMethods.clickElement(login_button, driver);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		logger.info("Clicked on login_button");
 
 		logger.info(driver);
@@ -28,33 +35,35 @@ public class LoginPage extends BaseClass {
 		Utils.SeleniumMethods.waitUntilElementToVisible(driver, ele1, 5);
 
 		logger.info("explicit is working fine");
-		WebElement login_model = driver.findElement(By.xpath("//h5[text() = 'Log in']"));
-		// Utils.SeleniumMethods.wait.Until(ElementToVisible(driver, login_model, 5));
+		By login_model = By.xpath("//h5[text() = 'Log in']");
+		Utils.SeleniumMethods.waitUntilElementToVisible(driver, login_model, 5);
 
 		logger.info("implicit and explicit time is set");
 
-		String login_text = login_model.getText();
+		String login_text = driver.findElement(login_model).getText();
 		logger.info(login_text);
 
 		Assert.assertEquals(login_text, "Log in");
 		// System.out.println(" text on the login model is"+loginText);
 
 		// xpath using parent child
-		WebElement username_locator = driver
-				.findElement(By.xpath("//div[@class='form-group']//child::input[@id='loginusername']"));
-		username_locator.sendKeys(username);
+		By username_locator = By.xpath("//div[@class='form-group']//child::input[@id='loginusername']");
+		Utils.SeleniumMethods.waitUntilElementToVisible(driver, username_locator, 5);
+		driver.findElement(username_locator).sendKeys(username);
 
 		Utils.SeleniumMethods.setImplicitlyWait(driver, 5);
 
 		// xpath using id
-		WebElement password_locator = driver.findElement(By.id("loginpassword"));
-		password_locator.sendKeys(password);
+		By password_locator = By.id("loginpassword");
+		Utils.SeleniumMethods.waitUntilElementToVisible(driver, password_locator, 5);
+		driver.findElement(password_locator).sendKeys(password);
 
 		Utils.SeleniumMethods.setImplicitlyWait(driver, 5);
 
 		// xpath using descendant & text
-		WebElement login = driver.findElement(By.xpath("//div[@id='logInModal']/descendant::button[text()='Log in']"));
-		login.click();
+		By login = By.xpath("//div[@id='logInModal']/descendant::button[text()='Log in']");
+		Utils.SeleniumMethods.waitUntilElementToVisible(driver, login, 5);
+		driver.findElement(login).click();
 
 		logger.info("login successful");
 
@@ -67,13 +76,12 @@ public class LoginPage extends BaseClass {
 				.xpath("//div[@id='videoModal']/following-sibling::nav/descendant::li[6]/child::a[text()='Log out']");
 		Utils.SeleniumMethods.waitUntilElementToVisible(driver, ele, 5);
 
-		WebElement logout = driver.findElement(By
-				.xpath("//div[@id='videoModal']/following-sibling::nav/descendant::li[6]/child::a[text()='Log out']"));
-
+		By logout = By
+				.xpath("//div[@id='videoModal']/following-sibling::nav/descendant::li[6]/child::a[text()='Log out']");
 		// xpath using descendant,following-sibling,text
-		String logout_text = logout.getText();
-		logger.info(logout.getText());
-		logout.click();
+		String logout_text = driver.findElement(logout).getText();
+		logger.info(logout_text);
+		driver.findElement(logout).click();
 		try {
 			Assert.assertEquals("Log outtttt", logout_text);
 		} catch (AssertionError e) {

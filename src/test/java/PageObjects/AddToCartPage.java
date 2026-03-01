@@ -33,7 +33,7 @@ public class AddToCartPage extends BaseClass {
         logger.info("Scrolled to desired product element");
 
         SeleniumMethods.setImplicitlyWait(driver, 5);
-        laptop_ele.click();
+        SeleniumMethods.clickElement(laptop_ele, driver);
         logger.info("clicked on desired product element");
 
         // accepting allert
