@@ -8,6 +8,7 @@ Utils\RetryListener.class
 PageObjects\LoginPage.class
 Utils\JsonUtil$1.class
 Utils\SeleniumMethods.class
+Utils\WaitUtility.class
 TestCases\LoginTest.class
 TestCases\AddToCartTest.class
 Utils\DriverFactory.class

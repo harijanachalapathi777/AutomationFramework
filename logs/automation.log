@@ -6807,3 +6807,168 @@ Command: [d55bb73e5145a48e3b9bd9522dae57e2, getAlertText {}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55381}, goog:processID: 11128, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55381/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: d55bb73e5145a48e3b9bd9522dae57e2
 12:38:44.224 [main] INFO  BaseTest.BaseClass - loading allure report....
+14:26:55.583 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:26:55.936 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:26:56.127 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:26:56.127 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (22b4486717be7354ef8bd5ff6c9220f6)
+14:26:56.858 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:26:56.909 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:26:56.967 [main] INFO  BaseTest.BaseClass - Log in
+14:26:57.483 [main] INFO  BaseTest.BaseClass - login successful
+14:26:57.483 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:26:57.483 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:01.300 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:01.337 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:01.662 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:01.662 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (9c8d358f8a79c3f23ff9c392ed2c7b4c)
+14:27:02.334 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:02.365 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:02.400 [main] INFO  BaseTest.BaseClass - Log in
+14:27:03.013 [main] INFO  BaseTest.BaseClass - login successful
+14:27:03.013 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:03.018 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:07.060 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:07.154 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:07.448 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:07.448 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (50d7d3147ce666c3b6c759f82864df46)
+14:27:08.233 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:09.206 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:09.272 [main] INFO  BaseTest.BaseClass - Log in
+14:27:09.842 [main] INFO  BaseTest.BaseClass - login successful
+14:27:09.842 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:09.847 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:13.818 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:13.852 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:14.396 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:14.396 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (0c8d91e49815e993d54ac5575cb5065e)
+14:27:15.116 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:15.145 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:15.179 [main] INFO  BaseTest.BaseClass - Log in
+14:27:15.659 [main] INFO  BaseTest.BaseClass - login successful
+14:27:15.659 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:15.659 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:20.633 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:20.716 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:21.155 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:21.158 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (bf206dd55b992b032a36e9fb955e6509)
+14:27:21.888 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:21.927 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:21.978 [main] INFO  BaseTest.BaseClass - Log in
+14:27:22.705 [main] INFO  BaseTest.BaseClass - login successful
+14:27:22.705 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:22.714 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:26.793 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:26.866 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:27.452 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:27.454 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (b9425ee2da0ec66c2a730891248299e4)
+14:27:27.978 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:28.066 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:28.169 [main] INFO  BaseTest.BaseClass - Log in
+14:27:29.011 [main] INFO  BaseTest.BaseClass - login successful
+14:27:29.011 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:29.020 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:32.831 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:32.847 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:33.341 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:33.345 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (e8c54bf666dd34d4ea2717f6abe6e84f)
+14:27:34.004 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:34.035 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:34.064 [main] INFO  BaseTest.BaseClass - Log in
+14:27:34.575 [main] INFO  BaseTest.BaseClass - login successful
+14:27:34.575 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:34.579 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:37.876 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:38.157 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:39.019 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:39.021 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (80a699e250d07f3808ff477882a00099)
+14:27:39.346 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:39.536 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:39.710 [main] INFO  BaseTest.BaseClass - Log in
+14:27:40.548 [main] INFO  BaseTest.BaseClass - login successful
+14:27:40.550 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:40.557 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:46.092 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:46.161 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:46.957 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:46.959 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (3d88b382cd6566bc1ffc7b59e0ce809f)
+14:27:47.536 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:47.617 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:47.719 [main] INFO  BaseTest.BaseClass - Log in
+14:27:48.694 [main] INFO  BaseTest.BaseClass - login successful
+14:27:48.694 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:48.702 [main] INFO  BaseTest.BaseClass - finding element...
+14:27:55.522 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:27:55.580 [main] INFO  BaseTest.BaseClass - **starting logintest**
+14:27:55.891 [main] INFO  BaseTest.BaseClass - Clicked on login_button
+14:27:55.891 [main] INFO  BaseTest.BaseClass - ChromeDriver: chrome on windows (5c2ef896421fdc5dae6f5889895ad0ed)
+14:27:56.419 [main] INFO  BaseTest.BaseClass - explicit is working fine
+14:27:56.503 [main] INFO  BaseTest.BaseClass - implicit and explicit time is set
+14:27:56.567 [main] INFO  BaseTest.BaseClass - Log in
+14:27:57.661 [main] INFO  BaseTest.BaseClass - login successful
+14:27:57.661 [main] INFO  BaseTest.BaseClass - setting implicit wait
+14:27:57.668 [main] INFO  BaseTest.BaseClass - finding element...
+14:28:03.356 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:03.402 [main] INFO  BaseTest.BaseClass - **starting testfailure**
+14:28:07.722 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:07.733 [main] INFO  BaseTest.BaseClass - **starting testfailure**
+14:28:13.812 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:13.865 [main] INFO  BaseTest.BaseClass - **starting testfailure**
+14:28:18.586 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:18.602 [main] INFO  BaseTest.BaseClass - **starting testfailure**
+14:28:23.856 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:23.956 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+14:28:24.498 [main] INFO  BaseTest.BaseClass - cliked on next button
+14:28:25.109 [main] INFO  BaseTest.BaseClass - waited for element to locate
+14:28:25.161 [main] INFO  BaseTest.BaseClass - Scrolled to desired product element
+14:28:26.250 [main] INFO  BaseTest.BaseClass - clicked on desired product element
+14:28:26.292 [main] ERROR BaseTest.BaseClass - Exception is: org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=145.0.7632.160)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e1d1e138b5cd044a2876cb8b82d2351, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65290}, goog:processID: 16840, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65290/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e1d1e138b5cd044a2876cb8b82d2351
+14:28:36.723 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:36.944 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+14:28:39.750 [main] INFO  BaseTest.BaseClass - cliked on next button
+14:28:40.445 [main] INFO  BaseTest.BaseClass - waited for element to locate
+14:28:40.694 [main] INFO  BaseTest.BaseClass - Scrolled to desired product element
+14:28:43.571 [main] INFO  BaseTest.BaseClass - clicked on desired product element
+14:28:43.592 [main] ERROR BaseTest.BaseClass - Exception is: org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=145.0.7632.160)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc5e23fcce7d197946aa5dfe92dbfee3, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64799}, goog:processID: 12088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64799/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc5e23fcce7d197946aa5dfe92dbfee3
+14:28:51.153 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:51.423 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+14:28:52.087 [main] INFO  BaseTest.BaseClass - cliked on next button
+14:28:52.820 [main] INFO  BaseTest.BaseClass - waited for element to locate
+14:28:53.057 [main] INFO  BaseTest.BaseClass - Scrolled to desired product element
+14:28:54.684 [main] INFO  BaseTest.BaseClass - clicked on desired product element
+14:28:54.694 [main] ERROR BaseTest.BaseClass - Exception is: org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=145.0.7632.160)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bcecd517f204b0dc825fa7148e72a2f1, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56332}, goog:processID: 14464, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56332/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bcecd517f204b0dc825fa7148e72a2f1
+14:28:59.265 [main] INFO  BaseTest.BaseClass - Logging to absolute path: C:\Users\Dell\git\repository\AutomationFramework
+14:28:59.290 [main] INFO  BaseTest.BaseClass - Scrolled to bottom to find next page
+14:29:00.437 [main] INFO  BaseTest.BaseClass - cliked on next button
+14:29:01.091 [main] INFO  BaseTest.BaseClass - waited for element to locate
+14:29:01.236 [main] INFO  BaseTest.BaseClass - Scrolled to desired product element
+14:29:02.609 [main] INFO  BaseTest.BaseClass - clicked on desired product element
+14:29:02.674 [main] ERROR BaseTest.BaseClass - Exception is: org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=145.0.7632.160)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8bd1c45aa08e222e1ce84a7d28d134c6, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64081}, goog:processID: 30060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64081/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8bd1c45aa08e222e1ce84a7d28d134c6
+14:29:03.802 [main] INFO  BaseTest.BaseClass - loading allure report....
