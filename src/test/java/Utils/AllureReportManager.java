@@ -24,8 +24,8 @@ public class AllureReportManager implements ITestListener {
   }
 
   // this is to get screenshot on failure
-  @Attachment(value = "{0}", type = "image/png")
-  public static byte[] saveFailureScreenshot(WebDriver driver) {
+  @Attachment(value = "Failure Screenshot", type = "image/png")
+  public static byte[] captureScreenshot(WebDriver driver) {
     return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
   }
 
@@ -58,38 +58,49 @@ public class AllureReportManager implements ITestListener {
   @Override
   public void onTestFailure(ITestResult result) {
 
-    System.out.println("====================test failure method is called======================");
-    System.out.println("Test failure: " + getTestMethodName(result) + " failed");
-
-    // get driver from test context(safe for parellel execution/ parellel runs)
     WebDriver driver = DriverFactory.getDriver();
-
     if (driver != null) {
-      String testName = result.getName();
-      System.out.println("Capturing screenshot for failed test: " + testName);
-
-      try {
-        // capture screenshot and attach to allure report
-        byte[] screenshot = saveFailureScreenshot(driver);
-        System.out.println("Screenshot captured for test: " + testName);
-
-        // Explicitly attach the screenshot to allure report
-        Allure.addAttachment("Screenshot - " + testName, "image/png",
-            new ByteArrayInputStream(screenshot), ".png");
-
-        System.out.println("Screenshot attached to Allure report for test: " + testName);
-
-        // save text log to allure report
-        saveTextLog("Test failed: " + getTestMethodName(result));
-      } catch (Exception e) {
-        System.out.println("Failed to attach screenshot to Allure report for test: " + testName);
-        e.printStackTrace();
-      }
-      System.out.println("=====================test failure method is ended======================");
-    } else {
-      System.out.println(
-          "WebDriver instance is null. Cannot capture screenshot for failed test: " + getTestMethodName(result));
+      captureScreenshot(driver);
+      saveTextLog("Test Failed : " + result.getName());
     }
+
+    // System.out.println("====================test failure method is
+    // called======================");
+    // System.out.println("Test failure: " + getTestMethodName(result) + " failed");
+
+    // // get driver from test context(safe for parellel execution/ parellel runs)
+    // WebDriver driver = DriverFactory.getDriver();
+
+    // if (driver != null) {
+    // String testName = result.getName();
+    // System.out.println("Capturing screenshot for failed test: " + testName);
+
+    // try {
+    // // capture screenshot and attach to allure report
+    // byte[] screenshot = captureScreenshot(driver);
+    // System.out.println("Screenshot captured for test: " + testName);
+
+    // // Explicitly attach the screenshot to allure report
+    // Allure.addAttachment("Screenshot - " + testName, "image/png",
+    // new ByteArrayInputStream(screenshot), ".png");
+
+    // System.out.println("Screenshot attached to Allure report for test: " +
+    // testName);
+
+    // // save text log to allure report
+    // saveTextLog("Test failed: " + getTestMethodName(result));
+    // } catch (Exception e) {
+    // System.out.println("Failed to attach screenshot to Allure report for test: "
+    // + testName);
+    // e.printStackTrace();
+    // }
+    // System.out.println("=====================test failure method is
+    // ended======================");
+    // } else {
+    // System.out.println(
+    // "WebDriver instance is null. Cannot capture screenshot for failed test: " +
+    // getTestMethodName(result));
+    // }
   }
 
   @Override

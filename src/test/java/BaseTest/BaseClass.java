@@ -66,8 +66,8 @@ public class BaseClass {
 
 	@AfterMethod(alwaysRun = true)
 	public static void tearDown() {
-		DriverFactory.quitDriver();
-		logger.info(Thread.currentThread().getId());
+		// DriverFactory.quitDriver();
+		// logger.info(Thread.currentThread().getId());
 	}
 
 	// @DataProvider(name = "loginData", indices = { 0 })
@@ -89,6 +89,8 @@ public class BaseClass {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		DriverFactory.quitDriver();
 
 	}
 }

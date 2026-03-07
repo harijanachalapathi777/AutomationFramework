@@ -1,7 +1,7 @@
 package Utils;
 
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,13 +10,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	private static ThreadLocal<WebDriverWait> wait = new ThreadLocal<WebDriverWait>();
 
 	public static void initDriver() throws Throwable {
 
@@ -24,7 +26,7 @@ public class DriverFactory {
 		String runMode = ConfigReader.get("runMode");
 		String gridUrl = ConfigReader.get("gridUrl");
 
-		WebDriver webDriver;
+		// WebDriver webDriver;
 
 		if ("remote".equalsIgnoreCase("runMode")) {
 			switch (browser.toLowerCase()) {
@@ -33,19 +35,19 @@ public class DriverFactory {
 					chromeOptions.addArguments("--headless");
 
 					chromeOptions.setCapability("browserName", "chrome");
-					webDriver = new RemoteWebDriver(new URL(gridUrl), chromeOptions);
+					driver.set(new RemoteWebDriver(new URL(gridUrl), chromeOptions));
 					break;
 
 				case "edge":
 					EdgeOptions edgeOptions = new EdgeOptions();
 					edgeOptions.setCapability("browserName", "edge");
-					webDriver = new RemoteWebDriver(new URL(gridUrl), edgeOptions);
+					driver.set(new RemoteWebDriver(new URL(gridUrl), edgeOptions));
 					break;
 
 				case "firefox":
 					FirefoxOptions firefoxOptions = new FirefoxOptions();
 					firefoxOptions.setCapability("browserName", "firefox");
-					webDriver = new RemoteWebDriver(new URL(gridUrl), firefoxOptions);
+					driver.set(new RemoteWebDriver(new URL(gridUrl), firefoxOptions));
 					break;
 
 				default:
@@ -55,24 +57,24 @@ public class DriverFactory {
 			switch (browser.toLowerCase()) {
 				case "chrome":
 					WebDriverManager.chromedriver().setup();
-					webDriver = new ChromeDriver();
+					driver.set(new ChromeDriver());
 					break;
 
 				case "edge":
 					WebDriverManager.edgedriver().setup();
-					webDriver = new EdgeDriver();
+					driver.set(new EdgeDriver());
 					break;
 
 				case "firefox":
 					WebDriverManager.firefoxdriver().setup();
-					webDriver = new FirefoxDriver();
+					driver.set(new FirefoxDriver());
 					break;
 
 				default:
 					throw new IllegalAccessException("unsupported browser" + browser);
 			}
 		}
-		driver.set(webDriver);
+		driver.set(driver.get());
 	}
 
 	// private static WebDriver createRemoteDriver(String gridUrl,
@@ -89,9 +91,13 @@ public class DriverFactory {
 	}
 
 	public static void quitDriver() {
+
 		if (driver.get() != null) {
 			driver.get().quit();
 			driver.remove();
+			if (wait.get() != null) {
+				wait.remove();
+			}
 		}
 	}
 
